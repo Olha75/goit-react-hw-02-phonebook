@@ -1,10 +1,21 @@
 import css from './contactList.module.css';
+import ContactItem from './ContactItem/ContactItem';
 
-const ContactList = ({ items }) => {
+const ContactList = ({ filtersContact, deleteContact }) => {
   return (
-    <ol>
-      <li>ghhhh</li>
-      <li>ghhhh</li>
+    <ol className={css.contactWrapper}>
+      {filtersContact &&
+        filtersContact.map(({ id, name, number }) => {
+          return (
+            <ContactItem
+              key={id}
+              id={id}
+              name={name}
+              number={number}
+              deleteContact={deleteContact}
+            />
+          );
+        })}
     </ol>
   );
 };
