@@ -19,11 +19,12 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    this.props.onSubmit({ ...this.state });
     this.setState({ ...INITIAL_STATE });
   };
 
   render() {
-    const { nameId, telId, handleSubmit } = this;
+    const { nameId, telId, handleSubmit, handleChange } = this;
     const { name, number } = this.state;
 
     return (
@@ -32,7 +33,7 @@ class ContactForm extends Component {
           <label htmlFor={nameId}>Name</label>
           <input
             value={name}
-            onChange={this.handleChange}
+            onChange={handleChange}
             id={nameId}
             type="text"
             name="name"
@@ -42,7 +43,7 @@ class ContactForm extends Component {
           <label htmlFor={telId}>Number</label>
           <input
             value={number}
-            onChange={this.handleChange}
+            onChange={handleChange}
             id={telId}
             type="tel"
             name="number"

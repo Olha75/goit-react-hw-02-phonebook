@@ -1,18 +1,13 @@
-import css from './contactItem.module.css';
+// import css from './contactItem.module.css';
+import React from 'react';
 
-const ContactItem = ({ id, name, number, deleteContact }) => {
-  return (
-    <li className={css.item}>
-      {name}: {number}
-      <button
-        type="button"
-        className={css.btn}
-        onClick={() => deleteContact(id)}
-      >
-        Delete
-      </button>
-    </li>
-  );
-};
+const ContactItem = ({ id, name, number, deleteContact }) => (
+  <li key={id}>
+    {name} {number}
+    <button onClick={() => deleteContact(id)} type="button">
+      Delete
+    </button>
+  </li>
+);
 
 export default ContactItem;

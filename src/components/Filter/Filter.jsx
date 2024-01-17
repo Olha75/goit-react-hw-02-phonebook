@@ -1,15 +1,15 @@
 import css from './filter.module.css';
 
-const Filter = ({ filterContact }) => {
+const Filter = ({ filter, changeFilter }) => {
   return (
     <label className={css.label} htmlFor="filter">
       Find contacts by name
       <input
-        type="text"
-        id="filter"
+        className={css.search}
+        onChange={changeFilter}
+        value={filter}
         name="filter"
-        className={css.input}
-        onInput={filterContact}
+        placeholder="Search"
       />
     </label>
   );
