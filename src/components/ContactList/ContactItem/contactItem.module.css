@@ -1,5 +1,7 @@
 .contactsItem {
-  height: 100%;
+  /* list-style: none; */
+  padding: 0;
+  position: relative;
 }
 
 .btnItem {
@@ -9,6 +11,9 @@
   border-radius: 50%;
   background: rgb(247, 163, 163);
   border-color: #ffffff;
-  margin-left: 20px;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
