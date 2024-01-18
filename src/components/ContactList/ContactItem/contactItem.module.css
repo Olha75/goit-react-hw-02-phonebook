@@ -2,6 +2,8 @@
   /* list-style: none; */
   padding: 0;
   position: relative;
+  border-bottom: 2px dotted;
+  border-color: aqua;
 }
 
 .btnItem {
