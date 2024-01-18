@@ -15,15 +15,17 @@ code {
 }
 
 .blockPhonebook {
-  padding: 20px;
+  padding: 30px;
   background-image: url(./image/2.2.3.jpg);
   background-color: rgb(221, 247, 238);
+  border-radius: 20px;
 }
 
 .titlePhonebook {
   color: transparent;
   -webkit-text-stroke: 1px aqua;
   text-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
 }
 /* 
 alert {
@@ -35,6 +37,7 @@ alert {
   color: transparent;
   -webkit-text-stroke: 1px rgb(164, 202, 12);
   text-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
 }
 
 .formContacts {
@@ -48,4 +51,5 @@ alert {
   color: rgb(233, 50, 144);
   margin-bottom: 2px;
   font-size: 16px;
+  padding-left: 10px;
 }

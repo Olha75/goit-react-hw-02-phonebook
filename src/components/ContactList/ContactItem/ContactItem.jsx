@@ -1,11 +1,15 @@
-// import css from './contactItem.module.css';
+import css from './contactItem.module.css';
 import React from 'react';
 
 const ContactItem = ({ id, name, number, deleteContact }) => (
-  <li key={id}>
+  <li className={css.contactsItem} key={id}>
     {name} {number}
-    <button onClick={() => deleteContact(id)} type="button">
-      Delete
+    <button
+      className={css.btnItem}
+      onClick={() => deleteContact(id)}
+      type="button"
+    >
+      X
     </button>
   </li>
 );

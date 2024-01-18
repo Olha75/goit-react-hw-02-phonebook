@@ -1,9 +1,10 @@
 import React from 'react';
 import ContactItem from './ContactItem/ContactItem';
+import css from './contactList.module.css';
 
 const ContactList = ({ items, deleteContact }) => (
   <>
-    <ul>
+    <ol className={css.allContact}>
       {items.map(({ id, name, number }) => (
         <ContactItem
           key={id}
@@ -13,7 +14,7 @@ const ContactList = ({ items, deleteContact }) => (
           deleteContact={deleteContact}
         />
       ))}
-    </ul>
+    </ol>
   </>
 );
 
