@@ -1,3 +1,26 @@
 .search {
   color: blueviolet;
 }
+
+.inpFiltr {
+  display: block;
+  width: 220px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid aqua;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  margin-top: 0;
+}
+
+input::placeholder {
+  color: gray;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.labelForm {
+  display: block;
+  color: rgb(7, 146, 146);
+  font-size: 20px;
+}
