@@ -91,7 +91,7 @@ class App extends Component {
         }}
       >
         <div className="blockPhonebook">
-          <h1 className="phonebook">Phonebook</h1>
+          <h1 className="titlePhonebook">Phonebook</h1>
           <div className="formWrapper">
             <ContactForm onSubmit={addContact} />
           </div>

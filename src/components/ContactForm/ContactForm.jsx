@@ -12,9 +12,21 @@ class ContactForm extends Component {
 
   handleChange = ({ target }) => {
     const { name, value } = target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (name === 'number') {
+      const numericValue = value.replace(/\D/g, '');
+      if (value !== numericValue) {
+        alert('Введіть тільки цифри');
+        return;
+      }
+      this.setState({
+        [name]: numericValue,
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = e => {
@@ -30,27 +42,35 @@ class ContactForm extends Component {
     return (
       <form className={css.forma} onSubmit={handleSubmit}>
         <div>
-          <label htmlFor={nameId}>Name</label>
+          <label className={css.labelForm} htmlFor={nameId}>
+            Name
+          </label>
           <input
+            className={css.inpForm}
             value={name}
             onChange={handleChange}
             id={nameId}
             type="text"
             name="name"
             required
-            placeholder="Введіть імя"
+            placeholder="Введіть ім'я"
           />
-          <label htmlFor={telId}>Number</label>
+          <label className={css.labelForm} htmlFor={telId}>
+            Number
+          </label>
           <input
+            className={css.inpForm}
             value={number}
             onChange={handleChange}
             id={telId}
             type="tel"
             name="number"
             required
-            placeholder="формат +380ххххххххх"
+            placeholder="Введіть номер телефона"
           />
-          <button type="submit">Add contact</button>
+          <button className={css.btnForm} type="submit">
+            Add contact
+          </button>
         </div>
       </form>
     );

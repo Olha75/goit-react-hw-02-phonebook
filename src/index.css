@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
 
 body {
   margin: 0;
@@ -16,9 +16,23 @@ code {
 
 .blockPhonebook {
   padding: 20px;
-  background-color: aquamarine;
+  background-image: url(./image/2.2.3.jpg);
+  background-color: rgb(221, 247, 238);
 }
-
+/* 
 .formWrapper {
   background-color: aqua;
+
+  padding: 2px;
+} */
+
+.titlePhonebook {
+  color: transparent;
+  -webkit-text-stroke: 1px aqua;
+  text-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.alertMessage {
+  color: red;
+  font-size: 30px;
 }
